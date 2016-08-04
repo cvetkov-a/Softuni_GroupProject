@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Fitness Centre HardSoft</title>
+    @Styles.Render("~/assets/css/style.css")
+    @Styles.Render("~/assets/css/loginReg.css")
+</head>
+<body>
+    <script type="text/javascript">
+                function makeContentDisappear () {
+                    document.getElementById("des").style.visibility = "hidden";
+                };
+    </script>
+    <aside class="sideBar">
+        <header>
+            <span class="glyphicon glyphicon-remove navbartogg"></span>
+        </header>
+        <main>
+            <div class="time">
+                <div>Any Questions?</div>
+                <div>Call Us: <span><a href="tel:202-555-0130">202-555-0130</a></span></div>
+            </div>
+        </main>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="s-l" id="home">
+        <header>
+            <div class="barSocial">
+                <div class="container">
+                    <nav class="social">
+                        <ul>
+                            <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="vimeo" href=""><i class="fa fa-vimeo"></i></a></li>
+                            <li><a class="pinterest" href=""><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="googlep" href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="youtube" href=""><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </nav>
+                    <p class="time">Any Questions? Call Us: <span><a href="tel:202-555-0130">202-555-0130</a></span></p>
+                    <div class="cls">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="slider img-responsive">
+                <div class="content" id="toDisappear">
+                    <h3>HardSoft - It's right now or never</h3>
+                    <p>You’re Tired, I’m Tired. You’re feeling down, me too. Does it make us weak? No, it makes us human. It’s never going to be the perfect time to start.<strong> Start now</strong>. Nobody will do it for you.</p>
+                    <a class="btn" id="buttonche" onclick="makeContentDisappear">Start now</a>
+                </div>
+                <script>
+                    makeContentDisappear();
+                </script>
+                <div class="loginReg">
+
+                </div>
+
+                <div class="navBar">
+                    <div class="container">
+                        <section class="logo">
+                            @Html.ActionLink("HardSoft", "Index", "Home")
+                        </section>
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#trainers">Trainers</a></li>
+                                <li>
+                                    <a href="" data-toggle="dropdown">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="">Training Programs</a></li>
+                                        <li><a href="">Gallery</a></li>
+                                        <li><a href="">Shop</a></li>
+                                        <li>@Html.ActionLink("The whole crew", "Trainers", "Home")</li>
+                                    </ul>
+                                </li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#about">About us</a></li>
+                            </ul>
+                        </nav>
+                        <button class="navbar-toggle">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                
+            </section>
+
+
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="text-align:center">&copy; @DateTime.Now.Year - Fitness Centre HardSoft</p>
+            <br />
+        </footer>
+
+    @RenderSection("scripts", required: false)
+
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/owl.carousel.min.js"></script>
+            <script src="assets/js/wow.min.js"></script>
+            <script src="assets/js/main.js"></script>
+</body>
+</html>

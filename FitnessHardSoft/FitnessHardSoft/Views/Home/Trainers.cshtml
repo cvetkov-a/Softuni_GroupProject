@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Trainers";
+}
+@Styles.Render("~/assets/css/Trainers.css")
+<section id="trainers" class="section">
+    <div class="container">
+        @foreach (var name in Model)
+        {
+            <div class="row trainers">
+                <div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <img src="~/assets/images/trainers/@name.PicLink" class="img-responsive" alt="">
+                                <div class="panel-body">
+                                    <div class="name">@name.Name @name.LastName</div>
+                                    <p>@name.Desc</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        }
+    </div>
+        
+</section>
+
+    </main>
+  </section>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+@Styles.Render("~/assets/css/news.css")
+<section id="blog" class="section">
+    <div class="container">
+@foreach (var news in Model)
+            {
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="img">
+                                    <a href="">
+                                        <img src="~/assets/images/news/@news.PicLink" class="img-responsive" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="content">
+                                    <h5 class="title">
+                                        <a href="">@news.Title</a>
+                                    </h5>
+                                    <p>@news.Content</p>
+                                    <p class="postedBy">
+                                        by
+                                        <a href="">@news.Author[0]</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+}
+    </div>
+</section>
+
+    </main>
+  </section>
